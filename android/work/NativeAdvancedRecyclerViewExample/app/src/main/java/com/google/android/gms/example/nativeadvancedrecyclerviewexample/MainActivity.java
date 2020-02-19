@@ -15,6 +15,8 @@
  */
 package com.google.android.gms.example.nativeadvancedrecyclerviewexample;
 
+import com.google.android.gms.ads.MobileAds;
+
 import android.support.v4.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
 
             loadMenu();
         }
+
+        MobileAds.initialize(this, getString(R.string.admob_app_id));
     }
 
     public List<Object> getRecyclerViewItems() {
